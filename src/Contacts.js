@@ -133,13 +133,19 @@ export const Contacts = () => {
             })
             .map((c) => {
               return (
-                <div
-                  className="contacts"
-                  key={c.phone}
-                  onClick={redirectContact.bind(this, c)}
-                >
-                  <div className="c-name">{c.name}</div>
-                  <div className="c-num">{c.phone}</div>
+                <div className="contacts" key={c.phone}>
+                  <div
+                    className="c-name"
+                    onClick={redirectContact.bind(this, c)}
+                  >
+                    {c.name}
+                  </div>
+                  <div
+                    className="c-num"
+                    onClick={redirectContact.bind(this, c)}
+                  >
+                    {c.phone}
+                  </div>
                   <div className="c-icons">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
